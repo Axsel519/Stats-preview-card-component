@@ -1,0 +1,138 @@
+/* الأسلوب الأساسي */
+* {
+    background-color: rgb(101, 36, 93);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(39, 17, 49);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 47vw;
+    filter: brightness(80%) hue-rotate(330deg);
+}
+
+h1 {
+    font-size: 2vw;
+    margin-bottom: 10vw;
+    margin: 5vw 0vw;
+    width: 35vw;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+strong {
+    color: #ff08be;
+}
+
+p {
+    font-size: 1vw;
+    margin-bottom: 3vw;
+    line-height: 1.5;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    width: 35vw;
+    height: 27.9vw;
+    border-radius: 0 10px 10px 0;
+    margin: -48px -1px;
+    padding: 0;
+    background-color: rgba(241, 38, 140, 0.4);
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+/* لشاشات متوسطة الحجم */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        max-width: 70vw;
+        text-align: left;
+        height: 24.9vw;
+    }
+
+    .heder {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .image {
+        flex: 1;
+        margin-top: 5px;
+    }
+}
+
+/* لشاشات الهواتف */
+@media (max-width: 480px) {
+    body {
+        height: 200vw;
+        padding: 10vw;
+    }
+
+    .container {
+        max-width: 90vw;
+        border-radius: 10px 10px 0px 0px;    
+        height: 185vw;
+    }
+
+    .image {
+        order: -1; 
+        width: 80vw;
+        height: auto;
+        margin-top: 10vw;
+        }
+
+    img {
+        margin: -14vw -20vw;
+        width: 89vw;
+        height: 70vw;
+        border-radius: 10px 10px 0px 0px;    
+
+    }
+
+    .heder {
+        margin: 15vw 0vw;
+    }
+
+    h1 {
+        font-size: 8vw;
+        width: 80vw;
+        text-align: center;
+    }
+
+    p {
+        font-size: 3.5vw;
+        margin-bottom: 5vw;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats div {
+        margin-bottom: 3vw;
+    }
+}
